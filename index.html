@@ -33,14 +33,57 @@
       <div class="text-center">
         <form action="">
           <div class="container">
-            <input type="text" placeholder="Buscar Pelicula" class="form-control">
+            <input type="text" placeholder="Buscar Pelicula, serie, persona..." class="form-control">
           </div>
         </form>
       </div>
     </div>
     
     <div class="container mt-3">
-      <h2 class="section-title">Popular</h2>
+      <div class="row">
+        <div class="col-2">
+          <h2 class="section-title ml-2">Popular</h2>
+        </div>
+        <div class="col-10">
+          <div class="select-box">
+            <div class="options-container">
+              <div class="option">
+                <input
+                  type="radio"
+                  class="radio"
+                  id="automobiles"
+                  name="category"
+                />
+                <label for="automobiles">Automobiles</label>
+              </div>
+    
+              <div class="option">
+                <input type="radio" class="radio" id="film" name="category" />
+                <label for="film">Streaming</label>
+              </div>
+    
+              <div class="option">
+                <input type="radio" class="radio" id="science" name="category" />
+                <label for="science">On TV</label>
+              </div>
+    
+              <div class="option">
+                <input type="radio" class="radio" id="art" name="category" />
+                <label for="art">For Rent</label>
+              </div>
+    
+              <div class="option">
+                <input type="radio" class="radio" id="music" name="category" />
+                <label for="music">In Theaters</label>
+              </div>
+            </div>
+    
+            <div class="selected">
+              Seleccionar categoría
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="media-scroller media-scroller--with-groups snaps-inline">
         <div class="media-group">
           <a href="detalle.html">
@@ -139,8 +182,18 @@
       </div>
     </div>
 
-    <div class="container mt-3">
-      <h2 class="section-title">Popular</h2>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-2">
+          <h2 class="section-title">Gratis</h2>
+        </div>
+        <div class="col-10">
+          <div class="row mt-2">
+            <button class="botones">Movies</button>
+            <button class="botones">Tv</button>
+          </div>
+        </div>
+      </div>
       <div class="media-scroller media-scroller--with-groups snaps-inline">
         <div class="media-group">
           <a href="detalle.html">
@@ -239,8 +292,18 @@
       </div>
     </div>
 
-    <div class="container mt-3">
-      <h2 class="section-title">Popular</h2>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-2">
+          <h2 class="section-title">Trending</h2>
+        </div>
+        <div class="col-10">
+          <div class="row mt-2">
+            <button class="botones">Today</button>
+            <button class="botones">This Week</button>
+          </div>
+        </div>
+      </div>
       <div class="media-scroller media-scroller--with-groups snaps-inline">
         <div class="media-group">
           <a href="detalle.html">
@@ -346,6 +409,7 @@
         &copy; 2021 - Movies - Abraldes & Yoo
       </div>
     </footer>
+    <script src="main.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
