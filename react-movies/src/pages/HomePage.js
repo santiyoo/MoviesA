@@ -1,10 +1,14 @@
+import Carrousel from "../components/Carrousel";
+import Header from "../components/Header";
+import TituloFiltrador from "../components/TituloFiltrador";
+
 export default function HomePage() {
   return (
     <>
-      {/* <Header /> */}
+      <Header/>
       <div className="container">
-        {/* <TituloFiltrador />
-        <Carrousel /> */}
+        <TituloFiltrador/>
+        <Carrousel/>
       </div>
 
       <div className="container mt-5">
