@@ -1,5 +1,5 @@
 import React from 'react';
-import poster from './img/poster.png';
+// import poster from './poster.png';
 
 const Carrousel = () => {
     return ( 
@@ -7,7 +7,7 @@ const Carrousel = () => {
             <div className="media-group">
             <a href="detalle.html">
                 <div className="media-element">
-                <img src={poster}/>
+                {/* <img src={poster}/> */}
                 <div className="ml-3">
                     <h6>Pelicula</h6>
                     <p>Año de salida</p>
@@ -16,7 +16,7 @@ const Carrousel = () => {
             </a>
             <a href="detalle.html">
                 <div className="media-element">
-                <img src={poster} alt=""/>
+                {/* <img src={poster} alt=""/> */}
                 <div className="ml-3">
                     <h6>Pelicula</h6>
                     <p>Año de salida</p>
@@ -25,7 +25,7 @@ const Carrousel = () => {
             </a>
             <a href="detalle.html">
                 <div className="media-element">
-                <img src={poster}/>
+                {/* <img src={poster}/> */}
                 <div className="ml-3">
                     <h6>Pelicula</h6>
                     <p>Año de salida</p>
@@ -34,7 +34,7 @@ const Carrousel = () => {
             </a>
             <a href="detalle.html">
                 <div className="media-element">
-                <img src={poster}/>
+                {/* <img src={poster}/> */}
                 <div className="ml-3">
                     <h6>Pelicula</h6>
                     <p>Año de salida</p>
@@ -43,7 +43,7 @@ const Carrousel = () => {
             </a>
             <a href="detalle.html">
                 <div className="media-element">
-                <img src={poster}/>
+                {/* <img src={poster}/> */}
                 <div className="ml-3">
                     <h6>Pelicula</h6>
                     <p>Año de salida</p>
@@ -54,7 +54,7 @@ const Carrousel = () => {
             <div className="media-group">
             <a href="detalle.html">
                 <div className="media-element">
-                <img src={poster}/>
+                {/* <img src={poster}/> */}
                 <div className="ml-3">
                     <h6>Pelicula</h6>
                     <p>Año de salida</p>
@@ -63,7 +63,7 @@ const Carrousel = () => {
             </a>
             <a href="detalle.html">
                 <div className="media-element">
-                <img src={poster}/>
+                {/* <img src={poster}/> */}
                 <div className="ml-3">
                     <h6>Pelicula</h6>
                     <p>Año de salida</p>
@@ -72,7 +72,7 @@ const Carrousel = () => {
             </a>
             <a href="detalle.html">
                 <div className="media-element">
-                <img src={poster}/>
+                {/* <img src={poster}/> */}
                 <div className="ml-3">
                     <h6>Pelicula</h6>
                     <p>Año de salida</p>
@@ -81,7 +81,7 @@ const Carrousel = () => {
             </a>
             <a href="detalle.html">
                 <div className="media-element">
-                <img src={poster}/>
+                {/* <img src={poster}/> */}
                 <div className="ml-3">
                     <h6>Pelicula</h6>
                     <p>Año de salida</p>
@@ -90,7 +90,7 @@ const Carrousel = () => {
             </a>
             <a href="detalle.html">
                 <div className="media-element">
-                <img src={poster}/>
+                {/* <img src={poster}/> */}
                 <div className="ml-3">
                     <h6>Pelicula</h6>
                     <p>Año de salida</p>
