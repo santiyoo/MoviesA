@@ -6,30 +6,31 @@ import TituloFiltrador from './components/TituloFiltrador';
 import poster from './img/poster.png';
 
 function App() {
-  const arrayTituloFilt = [
-    {
-      id: 1,
-      nombre: "Popular",
-      filtros: ["Streaming", "Television", "Alquiler", "Cines"]
+  // const arrayTituloFilt = [
+  //   {
+  //     id: 1,
+  //     nombre: "Popular",
+  //     filtros: ["Streaming", "Television", "Alquiler", "Cines"]
 
-    },
-    {
-      id: 2,
-      nombre: "Gratis",
-      filtros: ["Peliculas", "Television"]
-    },
-    {
-      id: 3,
-      nombre: "Trending",
-      filtros: ["Hoy", "Semana"]
-    }
-  ]
+  //   },
+  //   {
+  //     id: 2,
+  //     nombre: "Gratis",
+  //     filtros: ["Peliculas", "Television"]
+  //   },
+  //   {
+  //     id: 3,
+  //     nombre: "Trending",
+  //     filtros: ["Hoy", "Semana"]
+  //   }
+  // ]
+  
   return (
     <>
     <Header/>
     <div className="container">
-      {/* <TituloFiltrador/>
-      <Carrousel/> */}
+      <TituloFiltrador/>
+      <Carrousel/>
     </div>
 
     <div className="container mt-5">
@@ -52,102 +53,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="media-scroller media-scroller--with-groups snaps-inline">
-        <div className="media-group">
-          <a href="detalle.html">
-            <div className="media-element">
-              <img src={poster}/>
-              <div className="ml-3">
-                <h6>Pelicula</h6>
-                <p>Año de salida</p>
-              </div>
-            </div>
-          </a>
-          <a href="detalle.html">
-            <div className="media-element">
-              <img src={poster}/>
-              <div className="ml-3">
-                <h6>Pelicula</h6>
-                <p>Año de salida</p>
-              </div>
-            </div>
-          </a>
-          <a href="detalle.html">
-            <div className="media-element">
-              <img src={poster}/>
-              <div className="ml-3">
-                <h6>Pelicula</h6>
-                <p>Año de salida</p>
-              </div>
-            </div>
-          </a>
-          <a href="detalle.html">
-            <div className="media-element">
-              <img src={poster}/>
-              <div className="ml-3">
-                <h6>Pelicula</h6>
-                <p>Año de salida</p>
-              </div>
-            </div>
-          </a>
-          <a href="detalle.html">
-            <div className="media-element">
-              <img src={poster}/>
-              <div className="ml-3">
-                <h6>Pelicula</h6>
-                <p>Año de salida</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="media-group">
-          <a href="detalle.html">
-            <div className="media-element">
-              <img src={poster}/>
-              <div className="ml-3">
-                <h6>Pelicula</h6>
-                <p>Año de salida</p>
-              </div>
-            </div>
-          </a>
-          <a href="detalle.html">
-            <div className="media-element">
-              <img src={poster}/>
-              <div className="ml-3">
-                <h6>Pelicula</h6>
-                <p>Año de salida</p>
-              </div>
-            </div>
-          </a>
-          <a href="detalle.html">
-            <div className="media-element">
-              <img src={poster}/>
-              <div className="ml-3">
-                <h6>Pelicula</h6>
-                <p>Año de salida</p>
-              </div>
-            </div>
-          </a>
-          <a href="detalle.html">
-            <div className="media-element">
-              <img src={poster}/>
-              <div className="ml-3">
-                <h6>Pelicula</h6>
-                <p>Año de salida</p>
-              </div>
-            </div>
-          </a>
-          <a href="detalle.html">
-            <div className="media-element">
-              <img src={poster}/>
-              <div className="ml-3">
-                <h6>Pelicula</h6>
-                <p>Año de salida</p>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
+      <Carrousel/>
     </div>
 
     <div className="container mt-5 mb-5">
@@ -169,102 +75,7 @@ function App() {
             </ul>
           </div>
         </div>
-        <div className="media-scroller media-scroller--with-groups snaps-inline">
-          <div className="media-group">
-            <a href="detalle.html">
-              <div className="media-element">
-                <img src={poster}/>
-                <div className="ml-3">
-                  <h6>Pelicula</h6>
-                  <p>Año de salida</p>
-                </div>
-              </div>
-            </a>
-            <a href="detalle.html">
-              <div className="media-element">
-                <img src={poster}/>
-                <div className="ml-3">
-                  <h6>Pelicula</h6>
-                  <p>Año de salida</p>
-                </div>
-              </div>
-            </a>
-            <a href="detalle.html">
-              <div className="media-element">
-                <img src={poster}/>
-                <div className="ml-3">
-                  <h6>Pelicula</h6>
-                  <p>Año de salida</p>
-                </div>
-              </div>
-            </a>
-            <a href="detalle.html">
-              <div className="media-element">
-                <img src={poster}/>
-                <div className="ml-3">
-                  <h6>Pelicula</h6>
-                  <p>Año de salida</p>
-                </div>
-              </div>
-            </a>
-            <a href="detalle.html">
-              <div className="media-element">
-                <img src={poster}/>
-                <div className="ml-3">
-                  <h6>Pelicula</h6>
-                  <p>Año de salida</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div className="media-group">
-            <a href="detalle.html">
-              <div className="media-element">
-                <img src={poster}/>
-                <div className="ml-3">
-                  <h6>Pelicula</h6>
-                  <p>Año de salida</p>
-                </div>
-              </div>
-            </a>
-            <a href="detalle.html">
-              <div className="media-element">
-                <img src={poster}/>
-                <div className="ml-3">
-                  <h6>Pelicula</h6>
-                  <p>Año de salida</p>
-                </div>
-              </div>
-            </a>
-            <a href="detalle.html">
-              <div className="media-element">
-                <img src={poster}/>
-                <div className="ml-3">
-                  <h6>Pelicula</h6>
-                  <p>Año de salida</p>
-                </div>
-              </div>
-            </a>
-            <a href="detalle.html">
-              <div className="media-element">
-                <img src={poster}/>
-                <div className="ml-3">
-                  <h6>Pelicula</h6>
-                  <p>Año de salida</p>
-                </div>
-              </div>
-            </a>
-            <a href="detalle.html">
-              <div className="media-element">
-                <img src={poster}/>
-                <div className="ml-3">
-                  <h6>Pelicula</h6>
-                  <p>Año de salida</p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
+        <Carrousel/>
       </div>
     </div>
 
