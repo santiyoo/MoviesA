@@ -1,8 +1,7 @@
 import './App.css';
-import Carrousel from './components/Carrousel';
+import Bloque from './components/bloque';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import TituloFiltrador from './components/TituloFiltrador';
 
 function App() {
   // const arrayTituloFilt = [
@@ -27,12 +26,12 @@ function App() {
   return (
     <>
     <Header/>
-    <div className="container">
-      <TituloFiltrador/>
-      <Carrousel/>
-    </div>
+    
+    <Bloque/>
+    <Bloque/>
+    <Bloque/>
 
-    <div className="container mt-5">
+    {/* <div className="container mt-5">
       <div className="row">
         <div className="mt-1 ml-4 mr-4 col-md-2">
           <h2 className="section-title">Gratis</h2>
@@ -53,9 +52,9 @@ function App() {
         </div>
       </div>
       <Carrousel/>
-    </div>
+    </div> */}
 
-    <div className="container mt-5 mb-5">
+    {/* <div className="container mt-5 mb-5">
       <div className="row">
         <div className="mt-1 ml-4 mr-4 col-md-2">
           <h2 className="section-title">Trending</h2>
@@ -76,8 +75,7 @@ function App() {
         </div>
         <Carrousel/>
       </div>
-    </div>
-
+    </div> */}
 
     <Footer/>
     </>
