@@ -1,5 +1,5 @@
 import React from 'react';
-import poster from './img/poster.png';
+import poster from '../img/poster.png';
 
 const Carrousel = () => {
     return ( 
