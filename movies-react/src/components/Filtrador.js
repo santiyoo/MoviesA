@@ -2,6 +2,7 @@ import React from 'react';
 
 const Filtrador = (arrayTituloFilt) => {
     const {id, nombre, filtros} = arrayTituloFilt
+
     return (  
         arrayTituloFilt.map(filtros=>{
             <div className="mt-2 col-md-10">

@@ -1,4 +1,5 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import DetailsPage from './pages/DetailsPage';
 import HomePage from './pages/HomePage';
@@ -15,6 +16,8 @@ export default function App() {
         <Route path="/details" element={<DetailsPage/>} />
         <Route path='*' element={<NotFoundPage/>} />
       </Routes>
+
+      <Footer/>
     </BrowserRouter>
   );
 }

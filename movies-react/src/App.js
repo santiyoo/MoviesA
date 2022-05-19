@@ -1,7 +1,10 @@
 import './App.css';
-import Bloque from './components/bloque';
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Footer from './components/Footer';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
+import HomePage from './pages/HomePage';
+import DetailsPage from './pages/DetailsPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   // const arrayTituloFilt = [
@@ -25,59 +28,18 @@ function App() {
   
   return (
     <>
-    <Header/>
-    
-    <Bloque/>
-    <Bloque/>
-    <Bloque/>
+    <BrowserRouter>
 
-    {/* <div className="container mt-5">
-      <div className="row">
-        <div className="mt-1 ml-4 mr-4 col-md-2">
-          <h2 className="section-title">Gratis</h2>
-        </div>
-        <div className="mt-2 col-md-10">
-          <div className="category-head">
-            <ul>
-              <div className="category-title active" id="culture">
-                <li>Peliculas</li>
-                <span><i className="fas fa-theater-masks"></i></span>
-              </div>
-              <div className="category-title" id="politics">
-                <li>Television</li>
-                <span><i className="fas fa-landmark"></i></span>
-              </div>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <Carrousel/>
-    </div> */}
+      <Navbar/>
 
-    {/* <div className="container mt-5 mb-5">
-      <div className="row">
-        <div className="mt-1 ml-4 mr-4 col-md-2">
-          <h2 className="section-title">Trending</h2>
-        </div>
-        <div className="mt-2 col-md-10">
-          <div className="category-head">
-            <ul>
-              <div className="category-title active" id="culture">
-                <li>Hoy</li>
-                <span><i className="fas fa-theater-masks"></i></span>
-              </div>
-              <div className="category-title" id="politics">
-                <li>Semana</li>
-                <span><i className="fas fa-landmark"></i></span>
-              </div>
-            </ul>
-          </div>
-        </div>
-        <Carrousel/>
-      </div>
-    </div> */}
+      <Routes>
+        <Route path="/" element={<HomePage/>} />
+        <Route path="/details" element={<DetailsPage/>} />
+        <Route path='*' element={<NotFoundPage/>} />
+      </Routes>
 
-    <Footer/>
+      <Footer/>
+    </BrowserRouter>
     </>
   );
 }
