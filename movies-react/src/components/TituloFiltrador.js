@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TituloFiltrador = () => {
+const TituloFiltrador = ({titulo, filtros}) => {
 
   const categoryTitle = document.querySelectorAll('.category-title');
     const allCategoryPosts = document.querySelectorAll('.all');
@@ -30,24 +30,19 @@ const TituloFiltrador = () => {
     return ( 
         <>
           <div className="row">
-              <div className="mt-1 ml-4 mr-4 col-md-2">
-                <h2 className="section-title">Popular</h2>
+              <div className="mt-1 mr-5 col-md-2">
+                <h2 className="section-title" align="right">{titulo}</h2>
               </div>
               <div className="mt-2 col-md-10">
                 <div className="category-head">
                   <ul>
-                    <div className="category-title active" id="culture">
-                      <li>Streaming</li>
-                    </div>
-                    <div className="category-title" id="politics">
-                      <li>Television</li>
-                    </div>
-                    <div className="category-title" id="finance">
-                      <li>Alquiler</li>
-                    </div>
-                    <div className="category-title" id="business">
-                      <li>Cines</li>
-                    </div>
+                    {filtros.map((filtro)=>{
+                      return(
+                        <div className="category-title">
+                        <li>{filtro}</li>
+                        </div>    
+                      )  
+                    })}
                   </ul>
                 </div>
               </div>
@@ -56,4 +51,4 @@ const TituloFiltrador = () => {
      );
 }
  
-export default TituloFiltrador
+export default TituloFiltrador;

@@ -7,24 +7,6 @@ import DetailsPage from './pages/DetailsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
-  // const arrayTituloFilt = [
-  //   {
-  //     id: 1,
-  //     nombre: "Popular",
-  //     filtros: ["Streaming", "Television", "Alquiler", "Cines"]
-
-  //   },
-  //   {
-  //     id: 2,
-  //     nombre: "Gratis",
-  //     filtros: ["Peliculas", "Television"]
-  //   },
-  //   {
-  //     id: 3,
-  //     nombre: "Trending",
-  //     filtros: ["Hoy", "Semana"]
-  //   }
-  // ]
   
   return (
     <>

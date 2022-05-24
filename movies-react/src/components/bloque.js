@@ -2,10 +2,10 @@ import React from 'react';
 import Carrousel from './Carrousel';
 import TituloFiltrador from './TituloFiltrador';
 
-const Bloque = () => {
+const Bloque = ({titulo, filtros}) => {
     return ( 
         <div className="container mt-5">
-            <TituloFiltrador/>
+            <TituloFiltrador titulo={titulo} filtros={filtros}/>
             <Carrousel/>
         </div>
      );
