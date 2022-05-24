@@ -7,7 +7,7 @@ const Buscador = () => {
             <div className="text-center">
                 <form action="">
                     <div className="container">
-                        <input type="text" className="form-control" placeholder="Buscar Pelicula, serie, persona..."/>
+                        <input type="text" className="form-control " placeholder="Buscar Pelicula, serie, persona..."/>
                     </div>
                 </form>
             </div>

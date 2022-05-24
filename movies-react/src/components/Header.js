@@ -5,7 +5,6 @@ import Navbar from './Navbar';
 const Header = () => {
     return ( 
         <div className="align-end">
-            {/* <Navbar />*/}
             <div className="justify-content-center">
                 <Buscador/>
             </div>            
