@@ -7,7 +7,6 @@ import DetailsPage from './pages/DetailsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
-  
   return (
     <>
     <BrowserRouter>

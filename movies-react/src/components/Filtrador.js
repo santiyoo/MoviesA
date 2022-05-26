@@ -8,7 +8,7 @@ const Filtrador = (arrayTituloFilt) => {
             <div className="mt-2 col-md-10">
                 <div className="category-head">
                     <ul>
-                    <div className="category-title active" id="culture">
+                    <div className="category-title active">
                         <li>{filtros}</li>
                     </div>
                     </ul>

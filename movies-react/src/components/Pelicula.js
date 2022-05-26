@@ -1,0 +1,15 @@
+import React from "react";
+
+const Pelicula = ({pelicula}) => {
+    return (  
+        <>
+            <div class="ml-3">
+            <img src={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}  alt=""/>
+                <h6>{ pelicula.title }</h6>
+                <p>Estreno: { pelicula.release_date }</p>
+            </div>
+        </>
+    );
+}
+ 
+export default Pelicula;
