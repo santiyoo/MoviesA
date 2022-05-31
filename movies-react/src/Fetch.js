@@ -26,3 +26,8 @@ export const topRated = async () =>{
     const response = await axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
     return response.data
 }
+
+export const credits = async () =>{
+    const response = await axios.get(`http://api.themoviedb.org/3/movie/${id}/credits?api_key=828301d4bd29c42d8062e8eb994e41aa`)
+    return response.data
+}
