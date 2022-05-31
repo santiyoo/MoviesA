@@ -1,20 +1,36 @@
 import poster from '../img/poster.png';
 import perfil from '../img/perfil.png';
+import {useParams} from "react-router-dom"; 
+import { peliXId } from "../Fetch";
+import { useState, useEffect } from "react";
 
 export default function DetailsPage() {
-  return (
+  const {id}=useParams(); 
+  const [pelicula, setPelicula] = useState([]);
+
+    useEffect(() => {
+      peliXId(id).then((data) => {
+        setPelicula(data);
+      });
+    },[])  
+    
+    return (
     <>
+    {/* <div>
+      User <h2>{id}</h2>
+    </div> */}
+
 
     <div className="container mt-3">
       <div className="row">
           <div className="col-md-4">
-              <img src={poster} alt="" width="100%"/>
+              <img src={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`} alt="" width="75%%"/>
           </div>
           <div className="col-md-8">
-            <h2><b>Pelicula 1</b>(2012)</h2>
+            <h2><b>{ pelicula.title }</b>({ pelicula.release_date })</h2>
             <p>PG-13 11/11/2012 - Ciencia Ficción</p>
             <h4>Resumen</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+            <p>{pelicula.overview}</p>
             <div className="row">
               <div className="col-md-4">
                   <h6>Director</h6>

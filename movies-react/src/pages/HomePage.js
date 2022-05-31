@@ -12,6 +12,17 @@ export default function HomePage() {
     },[]);
   })
 
+  // useEffect(() => {
+  //   const res = await peliXTipo('now_playing')
+  //   setPeliculasnp(res.results)
+
+  //   const res = await peliXTipo('popular')
+  //   setPeliculasp(res.results)
+
+  //   const res = await peliXTipo('top_rated')
+  //   setPeliculastr(res.results)
+  // }, [])
+
   const [peliculasp, setPeliculasp] = useState([]);
 
   useEffect(() => {
