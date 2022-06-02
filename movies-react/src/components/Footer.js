@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="container text-center p-4 mt-4">
             <div className="row">
                 <div className="col-md-12">
-                    &copy; 2021 - Movies - Abraldes & Yoo
+                    &copy; 2022 - Movies - Abraldes & Yoo
                 </div>
             </div>
         </div>

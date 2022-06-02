@@ -5,39 +5,20 @@ import { useState, useEffect } from "react";
 
 export default function HomePage() {
   const [peliculasnp, setPeliculasnp] = useState([]);
+  const [peliculasp, setPeliculasp] = useState([]);
+  const [peliculastr, setPeliculastr] = useState([]);
 
   useEffect(() => {
     nowPlaying().then((data) => {
       setPeliculasnp(data.results);
-    },[]);
-  })
-
-  // useEffect(() => {
-  //   const res = await peliXTipo('now_playing')
-  //   setPeliculasnp(res.results)
-
-  //   const res = await peliXTipo('popular')
-  //   setPeliculasp(res.results)
-
-  //   const res = await peliXTipo('top_rated')
-  //   setPeliculastr(res.results)
-  // }, [])
-
-  const [peliculasp, setPeliculasp] = useState([]);
-
-  useEffect(() => {
+    })
     popular().then((data) => {
       setPeliculasp(data.results);
-    },[]);
-  })
-
-  const [peliculastr, setPeliculastr] = useState([]);
-
-  useEffect(() => {
+    })
     topRated().then((data) => {
       setPeliculastr(data.results);
-    },[]);
-  })
+    })
+  },[])
 
   const arrayTituloFilt = [
     {
