@@ -31,3 +31,10 @@ export const credits = async (id) =>{
     const response = await axios.get(`http://api.themoviedb.org/3/movie/${id}/credits?api_key=${apiKey}`)
     return response.data
 }
+
+export const allMovies = async (datasearch) =>{
+    const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${datasearch}`)
+    console.log(response.data)
+    return response.data
+}
+

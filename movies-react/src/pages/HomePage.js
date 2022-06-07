@@ -39,7 +39,7 @@ export default function HomePage() {
   return (
     <>
       <Header/>
-      
+ 
       <Bloque Peliculas={peliculasnp} titulo={arrayTituloFilt[0].titulo} filtros={arrayTituloFilt[0].filtros}/>
       <Bloque Peliculas={peliculasp} titulo={arrayTituloFilt[1].titulo} filtros={arrayTituloFilt[1].filtros}/>
       <Bloque Peliculas={peliculastr} titulo={arrayTituloFilt[2].titulo} filtros={arrayTituloFilt[2].filtros}/>

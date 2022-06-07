@@ -1,6 +1,5 @@
 import React from 'react';
 import Buscador from './buscador';
-import Navbar from './Navbar';
 
 const Header = () => {
     return ( 

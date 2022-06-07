@@ -27,6 +27,7 @@ export default function DetailsPage() {
       backgroundRepeat: 'no-repeat',  
       opacity: '50%'
     };
+
     return pelicula && creditos ? (
     <>
 
@@ -41,28 +42,19 @@ export default function DetailsPage() {
             <p><b>({ pelicula.release_date })</b> - { pelicula.genres?.map(genre => (genre.name + " - ")) }</p>
             <h4>Resumen</h4>
             <p>{pelicula.overview}</p>
- 
             <div className="row">
-              <div className="col-md-4">
-                {creditos.crew.map((x)=>{
-                  if (x.job === "Director") {
-                    return(
-                      <div className='ml-5'>
+              {creditos.crew.map((x)=>{
+                if (x.job === "Director") {
+                  return(
+                      <div className='  col-md-4'>
                         <img src={`https://image.tmdb.org/t/p/w200/${x.profile_path}`} alt="" width="40%"/>
                         <h6>{x.job}</h6>
-                        <p>{ creditos.crew.filter(crew => crew.job === "Director")[0].name }</p>
+                        {/* <p>{ creditos.crew.filter(crew => crew.job === "Director")[0].name }</p> */}
+                        <p>{x.name}</p>
                       </div>
-                  )
-                }
-                })}
-              </div>
-              {/* <div className="col-md-4">
-                  <h6>Director</h6>
-                  <p>Nombre Apellido</p>
-              
-                  <h6>Director</h6>
-                  <p>Nombre Apellido</p>
-              </div> */}
+                )
+              }
+              })}
             </div>
           </div>
       </div>
