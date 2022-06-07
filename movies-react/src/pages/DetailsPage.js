@@ -1,5 +1,3 @@
-import poster from '../img/poster.png';
-import perfil from '../img/perfil.png';
 import {useParams} from "react-router-dom"; 
 import { peliXId, credits } from "../Fetch";
 import { useState, useEffect } from "react";
