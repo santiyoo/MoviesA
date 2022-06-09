@@ -1,11 +1,11 @@
 import React from 'react';
 import Buscador from './buscador';
 
-const Header = () => {
+const Header = ({setFiltro}) => {
     return ( 
         <div className="align-end">
             <div className="justify-content-center">
-                <Buscador/>
+                <Buscador setFiltro={setFiltro}/>
             </div>            
         </div>
     );

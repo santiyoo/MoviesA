@@ -2,7 +2,7 @@ import React from 'react';
 import { allMovies } from '../Fetch';
 import { useState, useEffect } from "react";
 
-const Buscador = () => {
+const Buscador = ({setFiltro}) => {
     const [peliculas, setPeliculas] = useState([])
 
     useEffect(() => {
@@ -11,12 +11,6 @@ const Buscador = () => {
         })
     },[])
 
-
-    const searchMovie = async (query) => {
-        allMovies(query).then((data) => {
-            setPeliculas(data.results);
-        })
-    }
     
     return ( 
         <>
@@ -24,7 +18,7 @@ const Buscador = () => {
             <div className="text-center">
                 <form action="">
                     <div className="container">
-                        <input className="form-control" type="text" placeholder="Buscar Pelicula, serie, persona..." onChange={(e) => searchMovie(e.currentTarget.value)} data={peliculas}/>
+                        <input className="form-control" type="text" placeholder="Buscar Pelicula, serie, persona..." onChange={(e) => setFiltro(e.currentTarget.value)} data={peliculas}/>
                     </div>
                 </form>
             </div>

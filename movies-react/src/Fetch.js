@@ -17,13 +17,28 @@ export const nowPlaying = async () =>{
     return response.data
 }
 
+export const nowPlayingSeries = async () =>{
+    const response = await axios.get(`https://api.themoviedb.org/3/tv/airing_today?api_key=${apiKey}`)
+    return response.data
+}
+
 export const popular = async () =>{
     const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
     return response.data
 }
 
+export const popularSerie = async () =>{
+    const response = await axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}`)
+    return response.data
+}
+
 export const topRated = async () =>{
     const response = await axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
+    return response.data
+}
+
+export const topRatedSerie = async () =>{
+    const response = await axios.get(`https://api.themoviedb.org/3/tv/top_rated?api_key=${apiKey}`)
     return response.data
 }
 
@@ -34,7 +49,7 @@ export const credits = async (id) =>{
 
 export const allMovies = async (datasearch) =>{
     const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${datasearch}`)
-    console.log(response.data)
+    // console.log(response.data)
     return response.data
 }
 
