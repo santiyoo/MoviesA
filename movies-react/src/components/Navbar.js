@@ -16,11 +16,8 @@ const Navbar = () => {
                     <Link className="nav-link" aria-current="page" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/details">Details</Link>
+                    <Link className="nav-link" to="/movies">Everything</Link>
                     </li>
-                    {/* <li className="nav-item">
-                    <Link className="nav-link" to="/movies">Movies</Link>
-                    </li> */}
                 </ul>
                 </div>
             </div>
@@ -28,5 +25,5 @@ const Navbar = () => {
         </>
     );
 }
- 
+
 export default Navbar;

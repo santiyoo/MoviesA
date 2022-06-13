@@ -1,6 +1,4 @@
 import React from 'react';
-import poster from '../img/poster.png';
-import {Link} from 'react-router-dom'
 import Pelicula from './Pelicula';
 
 const Carrousel = ({ Peliculas }) => {

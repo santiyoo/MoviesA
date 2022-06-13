@@ -45,14 +45,14 @@ export default function HomePage() {
     },
     {
       titulo: "Top Rated",
-      filtros: ["Hoy", "Semana"]
+      filtros: ["Peliculas", "Television"]
     }
   ]
   
   return (
     <>
       <Header setFiltro={setFiltro}/>
- 
+
       <Bloque Peliculas={peliculasnpfilter} titulo={arrayTituloFilt[0].titulo} filtros={arrayTituloFilt[0].filtros}/>
       <Bloque Peliculas={peliculaspfilter} titulo={arrayTituloFilt[1].titulo} filtros={arrayTituloFilt[1].filtros}/>
       <Bloque Peliculas={peliculastrfilter} titulo={arrayTituloFilt[2].titulo} filtros={arrayTituloFilt[2].filtros}/>

@@ -15,5 +15,5 @@ const Pelicula = ({pelicula}) => {
         </>
     );
 }
- 
+
 export default Pelicula;
