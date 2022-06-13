@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Pelicula = ({pelicula}) => {
     const titulo = pelicula.title || pelicula.name
     const fecha = pelicula.release_date || pelicula.first_air_date
+    const tipo = pelicula.title ? 'movie' : 'tv'
     return (  
         <>
         {/* {pelicula.map((x)=>{
@@ -19,7 +20,7 @@ const Pelicula = ({pelicula}) => {
                 )
             }
         })} */}
-        <Link to={`/detail/${pelicula.id}`}>
+        <Link to={`/detail/${tipo}/${pelicula.id}`}>
             <div className="ml-3">
             <img src={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}  alt=""/>
                 <h6>{ titulo }</h6>

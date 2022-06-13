@@ -1,33 +1,22 @@
 import {useParams} from "react-router-dom"; 
-import { peliXId, credits, video } from "../Fetch";
+import { credits, video } from "../Fetch";
 import { useState, useEffect } from "react";
 
 export default function DetailsPage() {
 
-  const {id}=useParams(); 
+  const {id, tipo}=useParams(); 
   const [pelicula, setPelicula] = useState({});
-  const [video, setVideo] = useState({});
   const [creditos, setCreditos] = useState(undefined)
 
     useEffect(() => {
-      peliXId(id).then((data) => {
+      video(tipo,id).then((data) => {
         setPelicula(data);
       });
 
-      credits(id).then((data) => {
+      credits(tipo, id).then((data) => {
         setCreditos(data);
       });
     },[])
-    
-
-    // useEffect(()=>{
-    //   video(tag, id).then((data) => {
-    //     setVideo(data.results);
-    //   })
-    // },[tag, id])
-
-    useEffect(()=>{
-    }, [creditos])
 
     const myStyle={
       backgroundImage: `url('https://image.tmdb.org/t/p/w200/${pelicula.backdrop_path}')`,
@@ -46,7 +35,7 @@ export default function DetailsPage() {
               <img src={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`} alt="" width="100%"/>
           </div>
           <div className="col-md-8">
-            <h2><b>{ pelicula.title }</b></h2>
+            <h2><b>{ pelicula.title || pelicula.name }</b></h2>
             <p><b>({ pelicula.release_date })</b> - { pelicula.genres?.map(genre => (genre.name + " - ")) }</p>
             <h4>Resumen</h4>
             <p>{pelicula.overview}</p>

@@ -2,13 +2,8 @@ import axios from 'axios'
 
 const apiKey = '828301d4bd29c42d8062e8eb994e41aa';
 
-export const peliXId = async (id) => {
-    const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`)
-    return response.data
-}
-
-export const video = async (tag, id) => {
-    const response = await axios.get(`https://api.themoviedb.org/3/"${tag}"/${id}?api_key=${apiKey}`)
+export const video = async (tipo, id) => {
+    const response = await axios.get(`https://api.themoviedb.org/3/${tipo}/${id}?api_key=${apiKey}`)
     return response.data
 }
 
@@ -52,8 +47,8 @@ export const topRatedSerie = async () =>{
     return response.data
 }
 
-export const credits = async (id) =>{
-    const response = await axios.get(`http://api.themoviedb.org/3/movie/${id}/credits?api_key=${apiKey}`)
+export const credits = async (tipo, id) =>{
+    const response = await axios.get(`http://api.themoviedb.org/3/${tipo}/${id}/credits?api_key=${apiKey}`)
     return response.data
 }
 
