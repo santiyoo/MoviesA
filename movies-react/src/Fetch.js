@@ -7,8 +7,18 @@ export const peliXId = async (id) => {
     return response.data
 }
 
+export const video = async (tag, id) => {
+    const response = await axios.get(`https://api.themoviedb.org/3/"${tag}"/${id}?api_key=${apiKey}`)
+    return response.data
+}
+
 export const peliXTipo = async (type) => {
     const response = await axios.get(`https://api.themoviedb.org/3/movie/${type}?api_key=${apiKey}`)
+    return response.data
+}
+
+export const peliXTipoYTag = async (tipo, tag) => {
+    const response = await axios.get(`https://api.themoviedb.org/3/${tag}/${tipo}?api_key=${apiKey}`)
     return response.data
 }
 
@@ -22,13 +32,13 @@ export const nowPlayingSeries = async () =>{
     return response.data
 }
 
-export const popular = async () =>{
+export const popular = async (tag) =>{
     const response = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`)
     return response.data
 }
 
-export const popularSerie = async () =>{
-    const response = await axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}`)
+export const popularTest = async (tag) =>{
+    const response = await axios.get(`https://api.themoviedb.org/3/${tag}/popular?api_key=${apiKey}`)
     return response.data
 }
 
@@ -44,6 +54,11 @@ export const topRatedSerie = async () =>{
 
 export const credits = async (id) =>{
     const response = await axios.get(`http://api.themoviedb.org/3/movie/${id}/credits?api_key=${apiKey}`)
+    return response.data
+}
+
+export const creditsTester = async (tag, id) =>{
+    const response = await axios.get(`http://api.themoviedb.org/3/${tag}/${id}/credits?api_key=${apiKey}`)
     return response.data
 }
 

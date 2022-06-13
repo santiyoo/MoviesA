@@ -32,10 +32,10 @@ const AllMovies = () => {
             setPeliculastpFilter(data.results)
         })
 
-        popularSerie().then((data) => {
-            setPopulars(data.results);
-            setPopularsFilter(data.results)
-        })
+        // popularSerie().then((data) => {
+        //     setPopulars(data.results);
+        //     setPopularsFilter(data.results)
+        // })
 
         topRatedSerie().then((data) => {
             setTopRateds(data.results);
@@ -51,9 +51,9 @@ const AllMovies = () => {
     useEffect(()=>{
         setPeliculasFilter(peliculas.filter(x=>x.title.includes(filtro)))
         setPeliculastpFilter(peliculastp.filter(x=>x.title.includes(filtro)))
-        // setPopularsFilter(populars.filter(x=>x.title.includes(filtro)))
-        // setTopRatedsFilter(topRateds.filter(x=>x.title.includes(filtro)))
-        // setNowPlayingSeriesFilter(nowPlayingS.filter(x=>x.name.includes(filtro)))
+        setPopularsFilter(populars.filter(x=>x.name.includes(filtro)))
+        setTopRatedsFilter(topRateds.filter(x=>x.name.includes(filtro)))
+        setNowPlayingSeriesFilter(nowPlayingS.filter(x=>x.name.includes(filtro)))
     },[filtro])
 
     const myStyle={
@@ -66,11 +66,11 @@ const AllMovies = () => {
             <Header setFiltro={setFiltro}/>
             <div className="container" style={myStyle}>
                 <div className='row mb-3'>
-                    {peliculasfilter.map((x)=>{
+                    {peliculasfilter.map((x, index)=>{
                         if (x.poster_path != null){
                             return(
-                                <div className="col-md-2">
-                                    <div class="ml-3">
+                                <div key={index} className="col-md-2">
+                                    <div className="ml-3">
                                         <img src={`https://image.tmdb.org/t/p/w200/${x.poster_path}`} style={myStyle}/>
                                         <h6>{ x.title }</h6>
                                     </div>
@@ -78,11 +78,11 @@ const AllMovies = () => {
                             )
                         }
                     })}
-                    {peliculastpfilter.map((x)=>{
+                    {peliculastpfilter.map((x, index)=>{
                         if (x.poster_path != null) {
                             return(
-                                <div className="col-md-2">
-                                    <div class="ml-3">
+                                <div key={index} className="col-md-2">
+                                    <div className="ml-3">
                                         <img src={`https://image.tmdb.org/t/p/w200/${x.poster_path}`} style={myStyle}/>
                                         <h6>{ x.title }</h6>
                                     </div>
@@ -90,11 +90,11 @@ const AllMovies = () => {
                             )
                         }
                     })}
-                    {/* {popularsfilter.map((x)=>{
+                    {popularsfilter.map((x, index)=>{
                         if (x.poster_path != null) {
                             return(
-                                <div className="col-md-2">
-                                    <div class="ml-3">
+                                <div key={index} className="col-md-2">
+                                    <div className="ml-3">
                                         <img src={`https://image.tmdb.org/t/p/w200/${x.poster_path}`} style={myStyle}/>
                                         <h6>{ x.name }</h6>
                                     </div>
@@ -102,11 +102,11 @@ const AllMovies = () => {
                             )
                         }
                     })}
-                    {topRatedsfilter.map((x)=>{
+                    {topRatedsfilter.map((x, index)=>{
                         if (x.poster_path != null) {
                             return(
-                                <div className="col-md-2">
-                                    <div class="ml-3">
+                                <div key={index} className="col-md-2">
+                                    <div className="ml-3">
                                         <img src={`https://image.tmdb.org/t/p/w200/${x.poster_path}`} style={myStyle}/>
                                         <h6>{ x.name }</h6>
                                     </div>
@@ -114,18 +114,18 @@ const AllMovies = () => {
                             )
                         }
                     })}
-                    {nowPlayingSeriesfilter.map((x)=>{
+                    {nowPlayingSeriesfilter.map((x, index)=>{
                         if (x.poster_path != null) {
                             return(
-                                <div className="col-md-2">
-                                    <div class="ml-3">
+                                <div key={index} className="col-md-2">
+                                    <div className="ml-3">
                                         <img src={`https://image.tmdb.org/t/p/w200/${x.poster_path}`} style={myStyle}/>
                                         <h6>{ x.name }</h6>
                                     </div>
                                 </div>              
                             )
                         }
-                    })} */}
+                    })}
                 </div>
             </div>
         </>

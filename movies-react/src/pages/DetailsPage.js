@@ -1,11 +1,12 @@
 import {useParams} from "react-router-dom"; 
-import { peliXId, credits } from "../Fetch";
+import { peliXId, credits, video } from "../Fetch";
 import { useState, useEffect } from "react";
 
 export default function DetailsPage() {
 
   const {id}=useParams(); 
   const [pelicula, setPelicula] = useState({});
+  const [video, setVideo] = useState({});
   const [creditos, setCreditos] = useState(undefined)
 
     useEffect(() => {
@@ -18,6 +19,13 @@ export default function DetailsPage() {
       });
     },[])
     
+
+    // useEffect(()=>{
+    //   video(tag, id).then((data) => {
+    //     setVideo(data.results);
+    //   })
+    // },[tag, id])
+
     useEffect(()=>{
     }, [creditos])
 
