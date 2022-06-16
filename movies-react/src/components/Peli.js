@@ -14,7 +14,6 @@ const Pelicula = ({pelicula}) => {
                 <div>
                 <img src={`https://image.tmdb.org/t/p/w200/${pelicula.poster_path}`}  style={myStyle}/>
                     <h6>{ titulo }</h6>
-                    {/* <p>Released: { fecha }</p> */}
                 </div>
             </Link>
         </>

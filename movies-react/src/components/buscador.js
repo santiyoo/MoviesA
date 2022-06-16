@@ -1,16 +1,6 @@
 import React from 'react';
-import { allMovies } from '../Fetch';
-import { useState, useEffect } from "react";
 
 const Buscador = ({setFiltro}) => {
-    const [peliculas, setPeliculas] = useState([])
-
-    useEffect(() => {
-        allMovies().then((data) => {
-            setPeliculas(data.results);
-        })
-    },[])
-
     
     return ( 
         <>
@@ -18,7 +8,7 @@ const Buscador = ({setFiltro}) => {
             <div className="text-center">
                 <form action="">
                     <div className="container">
-                        <input className="form-control" type="text" placeholder="Buscar Pelicula, serie, persona..." onChange={(e) => setFiltro(e.currentTarget.value)} data={peliculas}/>
+                        <input className="form-control" type="text" placeholder="Buscar Pelicula, serie, persona..." onChange={(e) => setFiltro(e.currentTarget.value)}/>
                     </div>
                 </form>
             </div>

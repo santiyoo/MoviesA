@@ -1,15 +1,18 @@
 import Bloque from "../components/bloque";
 import Header from "../components/Header";
-import { nowPlaying, popular, topRated, peliXTipoYTag, popularTest, allMovies } from "../Fetch";
+import { nowPlaying, popular, topRated, peliXTipoYTag } from "../Fetch";
 import { useState, useEffect } from "react";
 
 export default function HomePage() {
   const [peliculasnp, setPeliculasnp] = useState([]);
-  const [peliculasp, setPeliculasp] = useState([]);
-  const [peliculastr, setPeliculastr] = useState([]);
   const [peliculasnpfilter, setPeliculasnpFilter] = useState([]);
+
+  const [peliculasp, setPeliculasp] = useState([]);
   const [peliculaspfilter, setPeliculaspFilter] = useState([]);
+
+  const [peliculastr, setPeliculastr] = useState([]);
   const [peliculastrfilter, setPeliculastrFilter] = useState([]);
+  
   const [populars, setPopulars] = useState([])
   const [popularsfilter, setPopularsFilter] = useState([])
 
@@ -18,6 +21,7 @@ export default function HomePage() {
 
   const [nowPlayingS, setNowPlayingSeries] = useState([])
   const [nowPlayingSeriesfilter, setNowPlayingSeriesFilter] = useState([])
+
   const [tag, setTag] = useState("")
   const [tipo, setTipo] = useState("")
   const [filtro, setFiltro] = useState("");
@@ -44,28 +48,28 @@ export default function HomePage() {
     })
   },[tag])
 
-  useEffect(()=>{
-    setPeliculasnpFilter(peliculasnp.filter(x=>x.title.includes(filtro)))
-    setPeliculaspFilter(peliculasp.filter(x=>x.title.includes(filtro)))
-    setPeliculastrFilter(peliculastr.filter(x=>x.title.includes(filtro)))
-    setPopularsFilter(populars.filter(x=>x.name.includes(filtro)))
-    setTopRatedsFilter(topRateds.filter(x=>x.name.includes(filtro)))
-    setNowPlayingSeriesFilter(nowPlayingS.filter(x=>x.name.includes(filtro)))
+  useEffect(()=>{    
+    setPeliculasnpFilter(peliculasnp.filter(x=>x.title ? x.title.includes(filtro) : x.name.includes(filtro)))
+    setPeliculaspFilter(peliculasp.filter(x=>x.title ? x.title.includes(filtro) : x.name.includes(filtro))) 
+    setPeliculastrFilter(peliculastr.filter(x=>x.title ? x.title.includes(filtro) : x.name.includes(filtro)))
+    setPopularsFilter(populars.filter(x=>x.title ? x.title.includes(filtro) : x.name.includes(filtro)))
+    setTopRatedsFilter(topRateds.filter(x=>x.title ? x.title.includes(filtro) : x.name.includes(filtro)))
+    setNowPlayingSeriesFilter(nowPlayingS.filter(x=>x.title ? x.title.includes(filtro) : x.name.includes(filtro)))
   },[filtro])
 
   const arrayTituloFilt = [
     {
       titulo: "Playing",
-      filtros: [{nombre: 'Cines', tag:'movie', tipo: 'now_playing'}, {nombre: 'Television', tag: 'tv', tipo: 'airing_today'}]
+      filtros: [{nombre: 'Movies', tag:'movie', tipo: 'now_playing'}, {nombre: 'Television', tag: 'tv', tipo: 'airing_today'}]
 
     },
     {
       titulo: "Popular",
-      filtros: [{nombre: 'Peliculas', tag:'movie', tipo:'popular'}, {nombre: 'Television', tag: 'tv', tipo:'popular'}]
+      filtros: [{nombre: 'Movies', tag:'movie', tipo:'popular'}, {nombre: 'Television', tag: 'tv', tipo:'popular'}]
     },
     {
       titulo: "Top Rated",
-      filtros: [{nombre: 'Peliculas', tag:'movie', tipo: 'top_rated'}, {nombre: 'Television', tag: 'tv', tipo: 'top_rated'}]
+      filtros: [{nombre: 'Movies', tag:'movie', tipo: 'top_rated'}, {nombre: 'Television', tag: 'tv', tipo: 'top_rated'}]
     }
   ]
   

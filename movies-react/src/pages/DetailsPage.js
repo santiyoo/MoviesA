@@ -36,7 +36,7 @@ export default function DetailsPage() {
           </div>
           <div className="col-md-8">
             <h2><b>{ pelicula.title || pelicula.name }</b></h2>
-            <p><b>({ pelicula.release_date })</b> - { pelicula.genres?.map(genre => (genre.name + " - ")) }</p>
+            <p><b>({ pelicula.release_date || pelicula.first_air_date})</b> - { pelicula.genres?.map(genre => (genre.name + " - ")) }</p>
             <h4>Resumen</h4>
             <p>{pelicula.overview}</p>
             <div className="row">
@@ -80,7 +80,7 @@ export default function DetailsPage() {
         <p>{pelicula.status}</p>
         <br/>
         <p><b>Orginal Language</b></p>
-        <p>{ pelicula.spoken_languages?.map(spoken_languages => (spoken_languages.name)) }</p>
+        <p>{ pelicula.spoken_languages?.map(spoken_languages => (spoken_languages.name)) } - </p>
         <br/>
         <p><b>Budget</b></p>
         <p>${pelicula.budget}</p>

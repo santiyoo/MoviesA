@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from '../components/Header';
-import { popular, popularSerie, nowPlayingSeries, topRated, topRatedSerie } from "../Fetch";
+import { popular, nowPlayingSeries, topRated, topRatedSerie } from "../Fetch";
 import { useState, useEffect } from "react";
+import Pelicula from '../components/Pelicula';
 
 const AllMovies = () => {
     const [filtro, setFiltro] = useState("");
@@ -32,11 +33,6 @@ const AllMovies = () => {
             setPeliculastpFilter(data.results)
         })
 
-        // popularSerie().then((data) => {
-        //     setPopulars(data.results);
-        //     setPopularsFilter(data.results)
-        // })
-
         topRatedSerie().then((data) => {
             setTopRateds(data.results);
             setTopRatedsFilter(data.results)
@@ -58,71 +54,53 @@ const AllMovies = () => {
 
     const myStyle={
         borderRadius: "10px",
-        height: "50%",
     };
 
     return (  
         <>
             <Header setFiltro={setFiltro}/>
-            <div className="container" style={myStyle}>
-                <div className='row mb-3'>
-                    {peliculasfilter.map((x, index)=>{
-                        if (x.poster_path != null){
+            <div className="container">
+                <div className='row'>
+                    {peliculasfilter.map((pelicula, index) => {
+                        return (
+                            <div className="col-md-2"> 
+                                <Pelicula key={index} pelicula={pelicula}/>
+                            </div>  
+                        )
+                    })}
+                    {peliculastpfilter.map((pelicula, index)=>{
+                        if (pelicula.poster_path != null) {
                             return(
-                                <div key={index} className="col-md-2">
-                                    <div className="ml-3">
-                                        <img src={`https://image.tmdb.org/t/p/w200/${x.poster_path}`} style={myStyle}/>
-                                        <h6>{ x.title }</h6>
-                                    </div>
+                            <div className="col-md-2"> 
+                                    <Pelicula key={index} pelicula={pelicula}/>
+                                </div>             
+                            )
+                        }
+                    })}
+                    {popularsfilter.map((pelicula, index)=>{
+                        if (pelicula.poster_path != null) {
+                            return(
+                                <div className="col-md-2"> 
+                                    <Pelicula key={index} pelicula={pelicula}/>
+                                </div>            
+                            )
+                        }
+                    })}
+                    {topRatedsfilter.map((pelicula, index)=>{
+                        if (pelicula.poster_path != null) {
+                            return(
+                               <div className="col-md-2"> 
+                                    <Pelicula key={index} pelicula={pelicula}/>
                                 </div>              
                             )
                         }
                     })}
-                    {peliculastpfilter.map((x, index)=>{
-                        if (x.poster_path != null) {
+                    {nowPlayingSeriesfilter.map((pelicula, index)=>{
+                        if (pelicula.poster_path != null) {
                             return(
-                                <div key={index} className="col-md-2">
-                                    <div className="ml-3">
-                                        <img src={`https://image.tmdb.org/t/p/w200/${x.poster_path}`} style={myStyle}/>
-                                        <h6>{ x.title }</h6>
-                                    </div>
-                                </div>              
-                            )
-                        }
-                    })}
-                    {popularsfilter.map((x, index)=>{
-                        if (x.poster_path != null) {
-                            return(
-                                <div key={index} className="col-md-2">
-                                    <div className="ml-3">
-                                        <img src={`https://image.tmdb.org/t/p/w200/${x.poster_path}`} style={myStyle}/>
-                                        <h6>{ x.name }</h6>
-                                    </div>
-                                </div>              
-                            )
-                        }
-                    })}
-                    {topRatedsfilter.map((x, index)=>{
-                        if (x.poster_path != null) {
-                            return(
-                                <div key={index} className="col-md-2">
-                                    <div className="ml-3">
-                                        <img src={`https://image.tmdb.org/t/p/w200/${x.poster_path}`} style={myStyle}/>
-                                        <h6>{ x.name }</h6>
-                                    </div>
-                                </div>              
-                            )
-                        }
-                    })}
-                    {nowPlayingSeriesfilter.map((x, index)=>{
-                        if (x.poster_path != null) {
-                            return(
-                                <div key={index} className="col-md-2">
-                                    <div className="ml-3">
-                                        <img src={`https://image.tmdb.org/t/p/w200/${x.poster_path}`} style={myStyle}/>
-                                        <h6>{ x.name }</h6>
-                                    </div>
-                                </div>              
+                                <div className="col-md-2"> 
+                                    <Pelicula key={index} pelicula={pelicula}/>
+                                </div>            
                             )
                         }
                     })}

@@ -1,11 +1,13 @@
 import React from 'react';
 import Buscador from './buscador';
+import Titulo from './Titulo';
 
 const Header = ({setFiltro}) => {
     return ( 
-        <div className="align-end">
-            <div className="justify-content-center">
-                <Buscador setFiltro={setFiltro}/>
+        <div>
+            <div>
+                <Titulo/>
+                <Buscador setFiltro={setFiltro} />
             </div>            
         </div>
     );

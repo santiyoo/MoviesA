@@ -7,11 +7,6 @@ export const video = async (tipo, id) => {
     return response.data
 }
 
-export const peliXTipo = async (type) => {
-    const response = await axios.get(`https://api.themoviedb.org/3/movie/${type}?api_key=${apiKey}`)
-    return response.data
-}
-
 export const peliXTipoYTag = async (tipo, tag) => {
     const response = await axios.get(`https://api.themoviedb.org/3/${tag}/${tipo}?api_key=${apiKey}`)
     return response.data
@@ -32,11 +27,6 @@ export const popular = async (tag) =>{
     return response.data
 }
 
-export const popularTest = async (tag) =>{
-    const response = await axios.get(`https://api.themoviedb.org/3/${tag}/popular?api_key=${apiKey}`)
-    return response.data
-}
-
 export const topRated = async () =>{
     const response = await axios.get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`)
     return response.data
@@ -51,15 +41,3 @@ export const credits = async (tipo, id) =>{
     const response = await axios.get(`http://api.themoviedb.org/3/${tipo}/${id}/credits?api_key=${apiKey}`)
     return response.data
 }
-
-export const creditsTester = async (tag, id) =>{
-    const response = await axios.get(`http://api.themoviedb.org/3/${tag}/${id}/credits?api_key=${apiKey}`)
-    return response.data
-}
-
-export const allMovies = async (datasearch) =>{
-    const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${datasearch}`)
-    // console.log(response.data)
-    return response.data
-}
-
