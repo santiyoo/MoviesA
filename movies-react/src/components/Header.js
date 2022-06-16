@@ -7,7 +7,7 @@ const Header = ({setFiltro}) => {
         <div>
             <div>
                 <Titulo/>
-                <Buscador setFiltro={setFiltro} />
+                <Buscador setFiltro={setFiltro}/>
             </div>            
         </div>
     );

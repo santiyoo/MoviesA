@@ -8,6 +8,7 @@ const Pelicula = ({pelicula}) => {
     const myStyle={
         borderRadius: "10px",
     };
+    
     return (  
         <>
             <Link to={`/detail/${tipo}/${pelicula.id}`}>
